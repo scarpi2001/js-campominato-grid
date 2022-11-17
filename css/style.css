@@ -27,6 +27,7 @@ header > h1 {
 #container {
     max-width: 720px;
     margin: 50px auto;
+    display: flex;
     flex-wrap: wrap;
 }
 
@@ -35,7 +36,8 @@ header > h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
+    border: 1px solid #fff;
+    color: #fff;
     width: 10%;
     height: 60px;
     cursor: pointer;
@@ -47,10 +49,3 @@ header > h1 {
     background-color: rgb(19, 137, 178);
 }
 
-.active {
-    display: flex;
-}
-
-.none {
-    display: none;
-}

@@ -11,33 +11,34 @@ const myButton = document.getElementById("button");
 myButton.addEventListener("click",
 
     function(){
+        //svuota griglia
+        contenitore.innerHTML = "";
+        console.clear();
 
-        contenitore.classList.remove("none");
-        contenitore.classList.add("active");
+        //genera 100 elementi (div) nella griglia
+        for (let i = 1; i <= 100; i++) {
+
+            const div = document.createElement("div");
+            div.classList.add("box");
+            div.append(i);
+            contenitore.append(div);
+
+            //al click aggiungi classe che colora la cella e stampa n° cella in console
+            div.addEventListener("click",
+
+                function(){
+                div.classList.add("azure");
+                console.log(i);
+                }
+
+            );
+
+        }
 
     }
 
 );
 
-//genera 100 elementi (div) nella griglia
-for (let i = 1; i <= 100; i++) {
-
-    const div = document.createElement("div");
-    div.classList.add("box");
-    div.append(i);
-
-    //al click aggiungi classe che colora la cella e stampa n° cella in console
-    div.addEventListener("click",
-
-        function(){
-        div.classList.add("azure");
-        console.log(i);
-        }
-
-    );
-
-    contenitore.append(div);
-
-} 
+ 
 
 
